@@ -1,0 +1,80 @@
+/* General styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter Tight', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fafafa;
+  background-color: #1c1d20;
+}
+
+/* Mobile */
+@media screen and (min-width: 320px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 7px;
+  }
+
+  .section {
+    padding-bottom: 64px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* /Mobile */
+
+/* Tablet */
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .section {
+    padding-bottom: 96px;
+  }
+}
+
+/* /Tablet */
+
+/* Desktop */
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
+
+  .section {
+    padding-bottom: 164px;
+  }
+}
+
+/* /Desktop */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

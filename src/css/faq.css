@@ -1,0 +1,197 @@
+/* Общие стили для раздела FAQ */
+.title-faq {
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 22px;
+  padding-left: 1px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+}
+
+/* Стили для контейнера аккордеона */
+.faq-section .accordion-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-section .ac {
+  background-color: transparent;
+  border: none;
+}
+
+/* Стили для кнопок аккордеона */
+.faq-section .ac-trigger.btn-text-faq {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  padding: 1px 77px 1px 1px;
+  font-size: 20px;
+  color: rgba(250, 250, 250, 1);
+  position: relative; /* Для позиционирования псевдоэлемента */
+  padding-top: 20px; /* Отступ сверху для текста */
+  padding-bottom: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+/* Стили текста внутри аккордеона */
+.faq-section .ac .ac-panel .ac-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  padding: 0px 0px 12px 1px;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+/* Стили стрелок в кнопках аккордеона */
+.arrow {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  padding: 7px;
+  width: 34px;
+  height: 34px;
+}
+
+.ac-trigger .arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.faq-section .ac-trigger .arrow {
+  right: 0px;
+  top: 20px;
+  transform: translateY(0%);
+}
+
+/* Переключение отображения стрелок */
+.ac-trigger .arrow-down,
+.is-active .ac-trigger .arrow-up {
+  display: block;
+}
+
+.ac-trigger .arrow-up,
+.is-active .ac-trigger .arrow-down {
+  display: none;
+}
+
+/* Стили псевдоэлементов и интерактивных состояний */
+.faq-section .ac-trigger.btn-text-faq:before,
+.faq-section .accordion-container::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: rgba(250, 250, 250, 0.2);
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.faq-section .ac-trigger.btn-text-faq:before {
+  top: 0;
+}
+
+.faq-section .accordion-container::after {
+  bottom: 0px;
+}
+
+.faq-section .accordion-container > li:last-child {
+  margin-bottom: 10px;
+}
+
+.faq-section .ac-trigger.btn-text-faq:focus {
+  color: rgba(250, 250, 250, 1);
+  outline: none;
+}
+
+.ac-trigger:after {
+  display: none;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (min-width: 768px) {
+  .responsive-break {
+    display: none;
+  }
+
+  .responsive-breaks {
+    display: block;
+  }
+
+  .faq-section .ac-trigger.btn-text-faq {
+    padding: 32px 130px 29px 1px;
+  }
+
+  .faq-section .ac .ac-panel .ac-text {
+    padding: 0px 90px 24px 1px;
+  }
+
+  .faq-section .ac-trigger .arrow {
+    top: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .faq-section .accordion-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .faq-section .ac-trigger.btn-text-faq {
+    padding: 32px 73px 29px 1px;
+  }
+
+  .faq-section .ac .ac-panel .ac-text {
+    padding: 0px 42px 24px 1px;
+  }
+
+  .faq-section .accordion-container .ac {
+    width: calc(50% - 32px);
+  }
+
+  /* Контроль порядка элементов */
+  .item-one {
+    order: 1;
+  }
+  .item-two {
+    order: 3;
+  }
+  .item-three {
+    order: 5;
+  }
+  .item-four {
+    order: 2;
+  }
+  .item-five {
+    order: 4;
+  }
+  .item-six {
+    order: 6;
+  }
+
+  /* Вертикальная линия для декоративных целей */
+  .vertical-line::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    bottom: 2px;
+    left: 50%;
+    width: 1px;
+    background-color: rgba(250, 250, 250, 0.2);
+    z-index: 10;
+  }
+
+  .faq-section .ac-trigger.btn-text-faq:before {
+    width: 110%;
+    left: -4%;
+  }
+
+  .faq-section .accordion-container::after {
+    bottom: 1px;
+  }
+}
