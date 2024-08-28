@@ -174,36 +174,21 @@
   font-weight: bold;
 }
 
-/* Адаптація для мобільних пристроїв */
-@media (max-width: 1440px) {
-  .child-aid {
-    padding: 70px 30px;
+/* Mobile */
+@media screen and (min-width: 320px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 7px;
   }
 
-  .child-aid__title {
-    font-size: 2.75rem;
-  }
-
-  .child-item {
-    padding: 25px;
-  }
-
-  .child-item__title {
-    font-size: 1.875rem;
-  }
-}
-
-@media (max-width: 768px) {
   .child-aid {
     padding: 50px 20px;
+    margin-bottom: 64px;
   }
 
   .child-aid__title {
-    font-size: 2.5rem;
-  }
-
-  .child-aid__items {
-    gap: 30px;
+    font-size: 2.25rem;
   }
 
   .child-item {
@@ -215,25 +200,79 @@
   }
 }
 
-@media (max-width: 320px) {
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .child-aid {
-    padding: 40px 15px;
+    padding: 60px 25px;
   }
 
   .child-aid__title {
-    font-size: 2rem;
-  }
-
-  .child-aid__items {
-    gap: 20px;
-    flex-direction: column;
+    font-size: 2.5rem;
   }
 
   .child-item {
-    padding: 15px;
+    padding: 25px;
   }
 
   .child-item__title {
-    font-size: 1.5rem;
+    font-size: 1.875rem;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .child-aid {
+    padding: 70px 30px;
+  }
+
+  .child-aid__title {
+    font-size: 2.75rem;
+  }
+
+  .child-item {
+    padding: 30px;
+  }
+
+  .child-item__title {
+    font-size: 2rem;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .section {
+    padding-bottom: 164px;
+  }
+
+  .child-aid {
+    padding: 90px 45px;
+  }
+
+  .child-aid__title {
+    font-size: 3.5rem;
+  }
+
+  .child-item {
+    padding: 40px;
+  }
+
+  .child-item__title {
+    font-size: 2.5rem;
   }
 }
