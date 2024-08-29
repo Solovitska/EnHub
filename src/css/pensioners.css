@@ -8,8 +8,8 @@
   }
 }
 
-/* Базові стилі */
-.child-aid {
+/* Базові стилі для секції "Допомога людям поважного віку" */
+.support-seniors {
   margin-bottom: 120px;
   background: linear-gradient(135deg, #ECEFF1 0%, #B0BEC5 50%, #90A4AE 100%);
   padding: 80px 40px;
@@ -24,12 +24,12 @@
   overflow: hidden;
 }
 
-.child-aid:hover {
+.support-seniors:hover {
   transform: translateY(-10px);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
-.child-aid::before {
+.support-seniors::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -40,11 +40,11 @@
   transition: transform 1s ease;
 }
 
-.child-aid:hover::before {
+.support-seniors:hover::before {
   transform: rotate(30deg) scale(1.2);
 }
 
-.child-aid__title {
+.support-seniors__title {
   font-size: 3rem;
   font-weight: 900;
   text-align: center;
@@ -65,114 +65,75 @@
 }
 
 /* Стилі для елементів */
-.child-aid__items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  position: relative;
-  z-index: 2;
-}
-
-.child-item {
-  background: #b9b8b8;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  padding: 30px;
-  text-align: center;
-  color: #ffffff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  max-width: 500px;
-}
-
-.child-item:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(64, 224, 208, 0.7), 0 0 20px rgba(70, 130, 159, 0.5);
-  background: linear-gradient(135deg, #B0BEC5 0%, #b9dced 100%);
-}
-
-.child-item__image-container {
+.support-category__photos {
   position: relative;
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto 20px;
+  max-width: 500px;
+  margin-bottom: 20px;
   border-radius: 15px;
   overflow: hidden;
-}
-
-.child-item__image {
-  width: 100%;
-  transition: transform 0.3s ease, filter 0.3s ease;
   z-index: 1;
-  position: relative;
-  transform-origin: center;
-  filter: grayscale(100%);
 }
 
-.child-item__image-container:hover .child-item__image {
-  transform: scale(1.05);
-  filter: grayscale(0%);
+.support-photo-wide {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 15px;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
 }
 
-.child-item__content {
+.support-seniors__content {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  color: #000000;
+  background: rgba(255, 255, 255, 0.9); /* Білий напівпрозорий фон */
+  color: #000000; /* Чорний колір тексту для контрасту */
   z-index: 2;
-  text-align: left;
- 
-  transform: translateY(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
   transition: opacity 0.5s ease, transform 0.5s ease;
-  overflow-y: auto;
   padding: 20px;
 }
 
-.child-item__image-container:hover .child-item__content {
+.support-category__photos:hover .support-seniors__content {
   opacity: 1;
   transform: translateY(0);
 }
 
-.child-item__title {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  z-index: 1;
-  position: relative;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Стилі для тексту */
-.child-text {
-  font-size: 20px;
-  line-height: 1.29;
-  letter-spacing: -0.02em;
+.support-seniors__benefits {
+  background: rgba(255, 255, 255, 0.9); /* Білий напівпрозорий фон */
+  border-radius: 10px;
+  padding: 20px;
   list-style: none;
-  padding: 0;
+  text-align: left;
+  margin: 0;
+  opacity: 1;
+  color: #000000; /* Чорний колір тексту */
 }
 
-.child-text li {
-  position: relative;
+.support-seniors__benefits li {
   margin-bottom: 10px;
   padding-left: 25px;
+  position: relative;
 }
 
-.child-text li::before {
+.support-seniors__benefits li::before {
   content: '\2713';
   position: absolute;
   left: 0;
-  color: #594a65;
-  font-size: 22px;
+  color: #594a65; /* Темно-фіолетовий колір для маркерів */
+  font-size: 20px;
   font-weight: bold;
 }
+/* Адаптивні стилі */
 
 /* Mobile */
 @media screen and (min-width: 320px) {
@@ -182,45 +143,36 @@
     padding: 0 7px;
   }
 
-  .child-aid {
+  .support-seniors {
     padding: 50px 20px;
     margin-bottom: 64px;
   }
 
-  .child-aid__title {
+  .support-seniors__title {
     font-size: 2.25rem;
   }
 
-  .child-item {
+  .support-seniors__benefits {
     padding: 20px;
-  }
-
-  .child-item__title {
-    font-size: 1.75rem;
   }
 }
 
 @media screen and (min-width: 375px) {
   .container {
-    width: 375px;
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  .child-aid {
+  .support-seniors {
     padding: 60px 25px;
   }
 
-  .child-aid__title {
+  .support-seniors__title {
     font-size: 2.5rem;
   }
 
-  .child-item {
+  .support-seniors__benefits {
     padding: 25px;
-  }
-
-  .child-item__title {
-    font-size: 1.875rem;
   }
 }
 
@@ -232,20 +184,16 @@
     padding-right: 32px;
   }
 
-  .child-aid {
+  .support-seniors {
     padding: 70px 30px;
   }
 
-  .child-aid__title {
+  .support-seniors__title {
     font-size: 2.75rem;
   }
 
-  .child-item {
+  .support-seniors__benefits {
     padding: 30px;
-  }
-
-  .child-item__title {
-    font-size: 2rem;
   }
 }
 
@@ -260,19 +208,15 @@
     padding-bottom: 164px;
   }
 
-  .child-aid {
+  .support-seniors {
     padding: 90px 45px;
   }
 
-  .child-aid__title {
+  .support-seniors__title {
     font-size: 3.5rem;
   }
 
-  .child-item {
+  .support-seniors__benefits {
     padding: 40px;
-  }
-
-  .child-item__title {
-    font-size: 2.5rem;
   }
 }

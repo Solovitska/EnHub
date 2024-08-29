@@ -8,6 +8,7 @@
   }
 }
 
+/* Базові стилі для секції "Допомога молодим людям" */
 .training-legal-aid {
   margin-bottom: 120px;
   background: linear-gradient(135deg, #ECEFF1 0%, #B0BEC5 50%, #90A4AE 100%);
@@ -33,7 +34,7 @@
   position: absolute;
   top: -50%;
   left: -50%;
-  
+  width: 200%;
   background: radial-gradient(circle, rgba(95, 90, 90, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
   z-index: 0;
   transition: transform 1s ease;
@@ -56,10 +57,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: fadeInDown 1s ease, colorChange 5s ease-in-out infinite;
-  -webkit-font-smoothing: antialiased; /* Плавніший текст */
 }
 
-/* Анімація для з'явлення */
 @keyframes fadeInDown {
   0% { opacity: 0; transform: translateY(-30px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -67,92 +66,82 @@
 
 /* Стилі для елементів */
 .support-category__photos {
-  display: flex;
-  justify-content: center; /* Центрує зображення по горизонталі */
-  align-items: center; /* Центрує зображення по вертикалі */
   position: relative;
-  max-width: 100%;
-  height: auto; /* Встановлює автоматичну висоту контейнера, щоб уникнути обрізання */
-  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+  border-radius: 15px;
   overflow: hidden;
   z-index: 1;
-  border: 5px solid transparent; /* Початкова рамка прозора */
-  transition: border-color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
 .support-photo-wide {
-  max-width: 100%;
-  height: auto; /* Зберігає пропорції зображення */
-  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
-  border-radius: 10px;
-  object-fit: contain; /* Забезпечує повне відображення зображення без обрізання */
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 15px;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
 }
 
-.support-category__photos:hover {
-  border-color: rgba(64, 224, 208, 0.8); /* Бірюзова підсвітка рамки при наведенні */
-  box-shadow: 0 15px 30px rgba(64, 224, 208, 0.5), 0 0 40px rgba(64, 224, 208, 0.3); /* Бірюзова тінь */
-}
-
-.support-photo-wide:hover {
-  transform: translateY(-10px) scale(1.05);
-}
-
-.support-seniors__content {
+.support-training__content {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  color: #000000;
+  background: rgba(255, 255, 255, 0.9); /* Білий напівпрозорий фон */
+  color: #000000; /* Чорний колір тексту для контрасту */
   z-index: 2;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   opacity: 0;
-  transform: translateY(20%);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-  overflow-y: auto;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   padding: 20px;
-  pointer-events: none; /* Забороняє взаємодію, поки елемент не активний */
 }
 
-.support-category__photos:hover .support-seniors__content {
+.support-category__photos:hover .support-training__content {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto; /* Дозволяє взаємодію після появи */
 }
 
-.support-seniors__benefits {
-  font-size: 20px;
-  line-height: 1.29;
-  letter-spacing: -0.02em;
+.support-training__benefits {
+  background: rgba(255, 255, 255, 0.9); /* Білий напівпрозорий фон */
+  border-radius: 10px;
+  padding: 20px;
   list-style: none;
-  padding: 0;
+  text-align: left;
+  margin: 0;
+  opacity: 1;
+  color: #000000; /* Чорний колір тексту */
 }
 
-.support-seniors__benefits li {
-  position: relative;
+.support-training__benefits li {
   margin-bottom: 10px;
   padding-left: 25px;
+  position: relative;
 }
 
-.support-seniors__benefits li::before {
+.support-training__benefits li::before {
   content: '\2713';
   position: absolute;
   left: 0;
-  color: #594a65;
-  font-size: 22px;
+  color: #594a65; /* Темно-фіолетовий колір для маркерів */
+  font-size: 20px;
   font-weight: bold;
 }
+
+/* Адаптивні стилі */
 
 /* Mobile */
 @media screen and (min-width: 320px) {
   .container {
     width: 100%;
+    margin: 0 auto;
     padding: 0 7px;
-  }
-
-  .section {
-    padding-bottom: 64px;
   }
 
   .training-legal-aid {
@@ -164,14 +153,13 @@
     font-size: 2.25rem;
   }
 
-  .support-photo-wide {
-    padding: 5px;
+  .support-training__benefits {
+    padding: 20px;
   }
 }
 
 @media screen and (min-width: 375px) {
   .container {
-    width: 375px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -183,6 +171,10 @@
   .support-categories__title {
     font-size: 2.5rem;
   }
+
+  .support-training__benefits {
+    padding: 25px;
+  }
 }
 
 /* Tablet */
@@ -193,10 +185,6 @@
     padding-right: 32px;
   }
 
-  .section {
-    padding-bottom: 96px;
-  }
-
   .training-legal-aid {
     padding: 70px 30px;
   }
@@ -205,8 +193,8 @@
     font-size: 2.75rem;
   }
 
-  .support-photo-wide {
-    padding: 20px;
+  .support-training__benefits {
+    padding: 30px;
   }
 }
 
@@ -214,6 +202,7 @@
 @media screen and (min-width: 1440px) {
   .container {
     width: 1440px;
+    margin: 0 auto;
   }
 
   .section {
@@ -221,14 +210,14 @@
   }
 
   .training-legal-aid {
-    padding: 90px 40px;
+    padding: 90px 45px;
   }
 
   .support-categories__title {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
-  .support-photo-wide {
-    padding: 30px;
+  .support-training__benefits {
+    padding: 40px;
   }
 }
