@@ -10,9 +10,9 @@ function toggleNav() {
 
 // Додаємо слухач подій до меню-бургера
 document.addEventListener('DOMContentLoaded', () => {
-  const burgerMenu = document.querySelector('.burger-menu-container');
+  const burgerMenuContainer = document.querySelector('.burger-menu-container');
 
-  if (burgerMenu) {
-    burgerMenu.addEventListener('click', toggleNav);
+  if (burgerMenuContainer) {
+    burgerMenuContainer.addEventListener('click', toggleNav);
   }
 });
