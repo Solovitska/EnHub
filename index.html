@@ -25,49 +25,34 @@
     <script type="module" crossorigin src="/EnHub/index.js"></script>
     <link rel="modulepreload" crossorigin href="/EnHub/assets/vendor-CTqzIL4Y.js">
     <link rel="stylesheet" crossorigin href="/EnHub/assets/vendor-CzG10Eoq.css">
-    <link rel="stylesheet" crossorigin href="/EnHub/assets/index-lHmGg8tt.css">
+    <link rel="stylesheet" crossorigin href="/EnHub/assets/index-Br9pp2al.css">
   </head>
   <body>
-    <section class="about-us-hero">
-  <div class="about-us-header">
-    <div class="about-us-logo-container">
-      <svg
-        class="about-us-logo-svg"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 100 100"
-      >
-        <circle
-          cx="50"
-          cy="50"
-          r="40"
-          stroke="#0A24ED"
-          stroke-width="5"
-          fill="transparent"
-        />
-        <text
-          x="50%"
-          y="50%"
-          text-anchor="middle"
-          dy=".3em"
-          font-size="14"
-          font-weight="bold"
-        >
-          Енергодар
-        </text>
-      </svg>
+    <section class="about-us-hero" id="about">
+  <div class="header-container">
+    <div class="header-title">
+      <h1>ЕНЕРГОДАРСЬКИЙ ХАБ </h1>
     </div>
-    <nav class="about-us-nav">
-      <ul class="about-us-nav-list">
-        <li><a href="#about">Про нас</a></li>
-        <li><a href="#reports">Звіти</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contacts">Контакти</a></li>
-      </ul>
-    </nav>
+    <div class="burger-menu-container">
+      <div class="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   </div>
 
+  <nav class="about-us-nav">
+    <ul class="about-us-nav-list">
+      <li><a href="#about">Про нас</a></li>
+      <li><a href="#reports">Звіти</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacts">Контакти</a></li>
+    </ul>
+  </nav>
+
   <div class="about-us-content">
-    <h1 class="about-us-title">Підтримка переселенців із Енергодара</h1>
+    <h2 class="about-us-title"></h2>
     <p class="about-us-description">
       Ми команда Енергодарського хабу, допомагаємо вимушено переміщеним людям із
       тимчасово окупованого міста. Тут вони можуть отримати консультації з
@@ -79,7 +64,6 @@
     <img src="/EnHub/assets/peoplemy-75dfxnn7.png" alt="Зображення людей" />
   </div>
 </section>
-
     <section class="child-aid" id="childrenhelp">
   <div class="container child-aid__container">
     <h2 class="child-aid__title section__title">Допомога дітям</h2>
@@ -354,5 +338,6 @@
       <!-- Loads the specified .html file -->
     </main>
 
+    <script src="./burger-menu.js"></script>
   </body>
 </html>
