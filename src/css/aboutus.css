@@ -11,15 +11,11 @@
   left: 0;
   right: 0;
   z-index: 20; /* Щоб панель була зверху всього іншого */
-
 }
-
-
 
 .burger-menu-container {
   position: relative;
   z-index: 10; /* Щоб меню-бургер був зверху навігації */
-
 }
 
 .burger-menu {
@@ -32,7 +28,6 @@
   background-color: #888e95; /* Сіро-голубий фон кнопки бургер-меню */
   border-radius: 5px; /* Закруглені кути */
   padding: 5px; /* Внутрішні відступи */
-
 }
 
 .burger-menu span {
@@ -46,8 +41,7 @@
 /* Відстань між бургер-меню і заголовком */
 .header-title {
   margin-left: 20px; /* Відстань між бургер-меню і заголовком */
-  color:#69819d;
-
+  color: #69819d;
 }
 
 /* Адаптивні стилі для мобільних та планшетів */
@@ -55,13 +49,11 @@
   .burger-menu {
     display: flex; /* Показуємо меню-бургер на мобільних та планшетах */
   }
-  .about-us-content{
+  .about-us-content {
     margin-bottom: 60px;
   }
-  .about-us-title{
+  .about-us-title {
     margin-bottom: 100px;
-    margin-top: 100px;
-
   }
 
   .about-us-nav {
@@ -76,8 +68,6 @@
     padding: 20px 0;
     transition: all 0.3s ease;
     z-index: 9; /* Навігація під меню-бургером */
-
-
   }
 
   .about-us-nav-list {
@@ -95,17 +85,7 @@
   .about-us-nav.active {
     display: flex;
   }
-  .about-us-nav {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
-  }
 
-  .about-us-nav.active {
-    opacity: 1;
-    max-height: 500px; /* Встановіть максимальну висоту для плавного відкриття */
-  }
   /* Анімація для меню-бургера при натисканні */
   .burger-menu.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
@@ -137,3 +117,13 @@
 [data-theme='light'] .burger-menu span {
   background-color: #fff; /* Білий колір для смуг бургер-меню у світлій темі */
 }
+/* Default state */
+.about-us-nav {
+  display: none; /* Hidden by default */
+}
+
+/* When 'active' class is added */
+.about-us-nav.active {
+  display: flex; /* Show the navigation */
+}
+
