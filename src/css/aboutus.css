@@ -1,258 +1,129 @@
-/* Общие стили для секции "About Us" */
-.about-us-hero {
-  padding: 60px 20px;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-/* Контейнер для логотипа и навигации */
-.about-us-header {
+/* Контейнер для бургер-меню і заголовка */
+.header-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-.about-us-logo-container {
-  width: 150px;
-  height: 150px;
-}
-
-.about-us-logo-svg {
-  animation: rotate-scale-about-us 3s linear infinite;
-}
-
-@keyframes rotate-scale-about-us {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(1.2);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-
-/* Навигация */
-.about-us-nav {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.about-us-nav-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 20px;
-}
-
-.about-us-nav-list li {
-  position: relative;
-}
-
-.about-us-nav-list li a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  color: var(--text-color);
-  padding: 10px 15px;
-  display: block;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.about-us-nav-list li a:hover {
-  color: #d0e20b;
-  transform: scale(1.1);
-}
-
-.about-us-nav-list li a::after {
-  content: '';
-  position: absolute;
+  align-items: center; /* Вертикальне вирівнювання */
+  justify-content: space-between; /* Розміщення елементів по боках */
+  padding: 20px; /* Додати загальний відступ для контейнера */
+  margin-bottom: 90px;
+  background-color: #bacbcf; /* Легкий сірий фон */
+  position: fixed; /* Фіксоване позиціонування */
+  top: 0; /* Закріплення в верхній частині */
   left: 0;
-  bottom: -5px;
-  width: 0;
-  height: 2px;
-  background-color: #d0e20b;
-  transition: width 0.3s ease-in-out;
+  right: 0;
+  z-index: 20; /* Щоб панель була зверху всього іншого */
+
 }
 
-.about-us-nav-list li a:hover::after {
+
+
+.burger-menu-container {
+  position: relative;
+  z-index: 10; /* Щоб меню-бургер був зверху навігації */
+
+}
+
+.burger-menu {
+  display: none; /* Приховано за замовчуванням на десктопах */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  background-color: #888e95; /* Сіро-голубий фон кнопки бургер-меню */
+  border-radius: 5px; /* Закруглені кути */
+  padding: 5px; /* Внутрішні відступи */
+
+}
+
+.burger-menu span {
+  display: block;
   width: 100%;
+  height: 3px;
+  background-color: #fff; /* Білий колір для смуг бургер-меню */
+  transition: all 0.3s ease;
 }
 
-.about-us-nav-list li a:focus {
-  color: #0a24ed;
-  outline: none;
-  transform: scale(1.1);
+/* Відстань між бургер-меню і заголовком */
+.header-title {
+  margin-left: 20px; /* Відстань між бургер-меню і заголовком */
+  color:#69819d;
+
 }
 
-.about-us-nav-list li a:focus::after {
-  width: 100%;
-}
-
-/* Контент секции "About Us" */
-.about-us-content {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.about-us-title {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.about-us-description {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.about-us-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.about-us-secondary-btn {
-  padding: 15px 30px;
-  border-radius: 5px;
-  text-decoration: none;
-  background-color: #444;
-  color: #fff;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.about-us-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Темная тема */
-[data-theme='dark'] .about-us-hero {
-  background-color: #000;
-  color: #fff;
-}
-
-[data-theme='dark'] .about-us-logo-svg text {
-  fill: #d0e20b; /* Цвет текста логотипа в темной теме */
-}
-
-[data-theme='dark'] .about-us-nav-list li a {
-  color: #fff;
-}
-
-[data-theme='dark'] .about-us-nav-list li a:hover {
-  color: #d0e20b;
-}
-
-[data-theme='dark'] .about-us-secondary-btn {
-  background-color: #fff;
-  color: #000;
-}
-
-/* Светлая тема */
-[data-theme='light'] .about-us-hero {
-  background-color: #fff;
-  color: #000;
-}
-
-[data-theme='light'] .about-us-logo-svg text {
-  fill: #0a24ed; /* Цвет текста логотипа в светлой теме */
-}
-
-[data-theme='light'] .about-us-nav-list li a {
-  color: #000;
-}
-
-[data-theme='light'] .about-us-nav-list li a:hover {
-  color: #0a24ed;
-}
-
-[data-theme='light'] .about-us-secondary-btn {
-  background-color: #444;
-  color: #fff;
-}
-
-.about-us-image {
-  display: flex;
-  padding-top: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-us-image img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Адаптивные стили для секции "About Us" */
+/* Адаптивні стилі для мобільних та планшетів */
 @media (max-width: 768px) {
-  .about-us-hero {
-    padding: 40px 10px;
+  .burger-menu {
+    display: flex; /* Показуємо меню-бургер на мобільних та планшетах */
   }
+  .about-us-content{
+    margin-bottom: 60px;
+  }
+  .about-us-title{
+    margin-bottom: 100px;
+    margin-top: 100px;
 
-  .about-us-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
 
   .about-us-nav {
-    margin-top: 20px;
+    display: none; /* Ховаємо навігацію за замовчуванням */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color); /* Використовуємо змінну для кольору фону */
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    z-index: 9; /* Навігація під меню-бургером */
+
+
   }
 
-  .about-us-title {
-    font-size: 28px;
-  }
-
-  .about-us-description {
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .about-us-header {
-    justify-content: space-between;
+  .about-us-nav-list {
+    flex-direction: column;
+    gap: 20px;
   }
 
   .about-us-nav-list li a {
-    font-size: 20px;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
   }
 
-  .about-us-title {
-    font-size: 48px;
+  /* Показуємо навігацію при активному класі */
+  .about-us-nav.active {
+    display: flex;
   }
 
-  .about-us-description {
-    font-size: 20px;
+  /* Анімація для меню-бургера при натисканні */
+  .burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
   }
 
-  .about-us-secondary-btn {
-    font-size: 18px;
-    padding: 18px 36px;
+  .burger-menu.active span:nth-child(2) {
+    opacity: 0; /* Прибираємо середню лінію */
   }
 
-  .about-us-image img {
-    max-width: 80%;
-    margin: 0 auto;
+  .burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
+}
 
-  .about-us-content {
-    margin: 0px 1px;
-  }
+/* Темна тема */
+[data-theme='dark'] .burger-menu {
+  background-color: #4b5d67; /* Темніший сіро-голубий фон для темної теми */
+}
 
-  .about-us-image {
-    position: absolute;
-    top: 266px;
-    left: 700px;
-  }
+[data-theme='dark'] .burger-menu span {
+  background-color: #fff; /* Білий колір для смуг бургер-меню в темній темі */
+}
 
-  .about-us-nav {
-    justify-content: end;
-  }
+/* Світла тема */
+[data-theme='light'] .burger-menu {
+  background-color: #b0c4de; /* Сіро-голубий фон для світлої теми */
+}
+
+[data-theme='light'] .burger-menu span {
+  background-color: #fff; /* Білий колір для смуг бургер-меню у світлій темі */
 }
