@@ -1,10 +1,11 @@
-// Function to toggle navigation and burger menu visibility
 function toggleNav() {
   const nav = document.querySelector('.about-us-nav');
   const burgerMenu = document.querySelector('.burger-menu');
 
+  console.log('Nav:', nav);
+  console.log('Burger Menu:', burgerMenu);
+
   if (nav && burgerMenu) {
-    // Toggle 'active' class to show/hide elements
     nav.classList.toggle('active');
     burgerMenu.classList.toggle('active');
   } else {
@@ -12,9 +13,10 @@ function toggleNav() {
   }
 }
 
-// Add event listener to the burger menu container after DOM content is loaded
 document.addEventListener('DOMContentLoaded', () => {
   const burgerMenuContainer = document.querySelector('.burger-menu-container');
+
+  console.log('Burger Menu Container:', burgerMenuContainer);
 
   if (burgerMenuContainer) {
     burgerMenuContainer.addEventListener('click', toggleNav);
