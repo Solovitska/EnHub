@@ -95,7 +95,17 @@
   .about-us-nav.active {
     display: flex;
   }
+  .about-us-nav {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  }
 
+  .about-us-nav.active {
+    opacity: 1;
+    max-height: 500px; /* Встановіть максимальну висоту для плавного відкриття */
+  }
   /* Анімація для меню-бургера при натисканні */
   .burger-menu.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
