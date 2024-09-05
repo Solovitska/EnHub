@@ -4,67 +4,45 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: #d0d3d5;
-  color: #534658;
-  font-size: 14px;
-
-  padding: 0 10px;
+  background-color: #f0f4f8; /* Світлий нейтральний фон */
+  color: #261e4f9b; /* Темний колір тексту */
+  font-size: 14px; /* Трохи збільшений розмір шрифту */
+  padding: 0 20px;
   box-sizing: border-box;
+  border-bottom: 5px solid  #4eb5ffb0; /* Легка тінь для розділення */
 }
 
 /* Стилі для логотипу */
-.logo {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+.logo img {
+  display: block;
   width: 90px;
-  height: 90px;
-  box-sizing: border-box;
+  height: auto; /* Автоматична висота для збереження пропорцій */
+}
+
+/* Стилі для заголовка */
+.header-title h1 {
+  font-size: 2rem; /* Збільшений розмір шрифту для більшого акценту */
+  font-weight: 700;
+  color: #4a4a4a; /* Темний сірий колір тексту */
 }
 
 /* Стилі для бургер-меню */
 .burger {
   display: none; /* Приховуємо бургер-меню за замовчуванням */
   position: relative;
-  align-items: center;
-  justify-content: flex-end;
   width: 30px;
-  height: 18px;
+  height: 20px;
   cursor: pointer;
+  z-index: 1000; /* Забезпечує видимість поверх інших елементів */
 }
 
-/* Смуги бургер-меню */
 .burger span {
   height: 2px;
-  width: 40px; /* Початкова ширина всіх смуг */
-  background-color: rgb(113, 160, 177);
+  width: 30px;
+  background-color: #3498db6c; /* Яскравий блакитний колір смуг */
   display: block;
   transition: all 0.3s ease;
-}
-
-.burger span:nth-child(2) {
-  width: 20px; /* Менша ширина для середньої смуги */
-  align-self: center; /* Центрує середню смугу горизонтально */
-}
-
-/* Позиціонування смуг бургер-меню */
-.burger::before,
-.burger::after {
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background-color: rgb(113, 111, 111);
-  transition: all 0.3s ease;
-}
-
-.burger::before {
-  top: 0;
-}
-
-.burger::after {
-  bottom: 0;
+  margin: 5px 0; /* Відстань між смугами */
 }
 
 /* Стилі для активного стану бургер-меню */
@@ -73,34 +51,57 @@
 }
 
 .burger.active::before {
+  content: '';
+  position: absolute;
   top: 50%;
-  transform: rotate(-45deg) translate(0, -50%);
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: #3498db; /* Яскравий блакитний колір для перетворень */
+  transform: rotate(-45deg) translate(-50%, -50%);
 }
 
 .burger.active::after {
-  bottom: 50%;
-  transform: rotate(45deg) translate(0, 50%);
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: #3498db; /* Яскравий блакитний колір для перетворень */
+  transform: rotate(45deg) translate(-50%, 50%);
 }
 
 /* Стилі для навігації */
 .about-us-nav {
   display: flex; /* Відображаємо навігацію завжди */
   flex-direction: row; /* Горизонтальне відображення пунктів меню */
-  position: static; /* Вимикаємо фіксоване позиціонування */
-  height: auto;
-  width: auto;
+  gap: 20px;
   background-color: transparent; /* Прозорий фон */
   padding: 0;
-  gap: 20px;
 }
 
 .about-us-nav ul {
-
-  display: flex;
-  list-style: none;
+  list-style: none; /* Прибирає маркери списку */
   padding: 0;
   margin: 0;
+  display: flex; /* Відображення елементів в рядок */
   gap: 20px; /* Відстань між пунктами меню */
+}
+
+.about-us-nav a {
+  text-decoration: none; /* Прибирає підкреслення з посилань */
+  color: #3498db; /* Яскравий блакитний колір тексту */
+  padding: 10px 15px; /* Відступи всередині пунктів меню */
+  display: block; /* Перетворює посилання в блочний елемент */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Анімація при наведенні */
+  border-radius: 5px; /* Закруглені кути */
+  font-size: 16px; /* Зменшено для компактного вигляду */
+}
+
+.about-us-nav a:hover {
+  background-color: #e1e8f0; /* Світлий фон при наведенні */
+  color: #333; /* Темний колір тексту при наведенні */
 }
 
 /* Медіа-запити для планшетів і мобільних пристроїв */
@@ -112,15 +113,17 @@
   .about-us-nav {
     display: none; /* Ховаємо навігацію за замовчуванням */
     flex-direction: column;
-    position: fixed;
+    position: fixed; /* Фіксоване позиціонування */
     top: 0;
     left: 0;
-    z-index: 50;
-    overflow-y: auto;
-    padding: 50px 40px;
-    background-color: #f6fafc1b;
-    transform: translateX(-100%); /* Ховаємо меню за межами екрана */
+    z-index: 999; /* Під бургер-меню, але поверх іншого контенту */
+    width: 100%;
+    height: 100%;
+    padding: 50px 20px;
+    background-color: rgba(44, 62, 80, 0.9); /* Темний фон з невеликою прозорістю */
+    transform: translateX(-100%); /* Ховаємо меню за межами екрану */
     transition: transform 0.4s ease;
+    overflow-y: auto; /* Додаємо скролінг, якщо вміст перевищує висоту */
   }
 
   .about-us-nav.open {

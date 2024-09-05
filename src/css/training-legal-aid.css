@@ -32,6 +32,7 @@
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  border-bottom: 5px solid  #4eb5ffb0; /* Легка тінь для розділення */
 }
 
 .training-legal-aid:hover {
@@ -69,36 +70,30 @@
   animation: fadeInDown 1s ease, colorChange 6s ease-in-out infinite;
 }
 
-/* Стилі для елементів */
+/* Стилі для контейнера з фото */
 .support-category-photos {
-  position: relative;
+  position: relative; /* Для правильної позиції стрілки */
   width: 100%;
-  max-width: 500px;
-  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  border-radius: 15px;
   overflow: hidden;
-  z-index: 1;
+  border: 10px solid #87c7f6; /* Початковий колір рамки */
 }
 
 /* Стилі для фото */
 .support-photo-wide {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease, filter 0.3s ease, border-color 0.3s ease; /* Додаємо перехід для зміни кольору рамки */
   border-radius: 15px;
   object-fit: cover;
   display: block;
   z-index: 1;
-  border: 15px solid hsl(216, 3%, 65%); /* Темно-фіолетовий колір рамки */
   box-shadow: 0 4px 8px hsl(215, 68%, 78%); /* Тінь для ефекту */
   animation: blink 1.5s infinite; /* Додаємо анімацію "мигання" */
 }
 
-/* Зміна кольору рамки і тіні при наведенні */
-.support-category-photos:hover .support-photo-wide {
-  border-color: #b8dbed; /* Золотистий колір рамки при наведенні */
-  box-shadow: 0 6px 12px hsl(215, 68%, 78%); /* Збільшена тінь при наведенні */
-}
-
+/* Контент з текстом поверх фото */
 .support-training-content {
   position: absolute;
   bottom: 0;
@@ -207,7 +202,7 @@
   .support-training-benefits {
     padding: 40px;
   }
-  .support-photo-wide{
+  .support-photo-wide {
     max-width: 800px;
   }
 }

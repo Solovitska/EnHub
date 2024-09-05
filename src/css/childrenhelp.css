@@ -14,16 +14,12 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Анімація для "мигання" рамки */
-@keyframes blink {
-  0%, 100% { border-color: #8ebfbf; } /* Початковий та кінцевий кольори рамки */
-  50% { border-color: #f6f1f1; } /* Колір рамки в середині анімації */
-}
 /* Стиль для секцій */
 .child-aid {
   position: relative;
   padding: 40px 20px;
   background: linear-gradient(135deg, #ECEFF1, #B0BEC5, #90A4AE);
+  border-bottom: 4px solid #a9a5ec; /* Легка тінь для розділення */
   /* Інші стилі */
 }
 
@@ -82,7 +78,7 @@
   margin-bottom: 30px;
   position: relative;
   z-index: 2;
-  background: linear-gradient(135deg, #594a65 0%, #808080 100%);
+  background: linear-gradient(135deg, hsl(273, 15%, 34%) 0%, #808080 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: fadeInDown 1s ease, colorChange 5s ease-in-out infinite;
@@ -126,7 +122,6 @@
   border-radius: 15px;
   overflow: hidden;
   border: 10px solid #87c7f6; /* Початковий колір рамки */
-  animation: blink 1.5s infinite; /* Анімація "мигання" */
 }
 
 .child-item-image {

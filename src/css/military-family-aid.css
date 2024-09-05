@@ -22,7 +22,7 @@
   }
   50% {
     border-width: 3px;
-    border-color: #50919d; /* Темно-фіолетовий колір рамки */
+    border-color: #85dae9; /* Темно-фіолетовий колір рамки */
   }
   100% {
     border-width:  0;
@@ -42,6 +42,7 @@
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  border-bottom: 5px solid  #4eb5ffb0; /* Легка тінь для розділення */
 }
 
 /* Додавання рамки з анімацією */

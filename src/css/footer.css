@@ -1,0 +1,44 @@
+/* Стилі для заголовка в футері */
+.section-title-footer {
+  font-size: 2rem; /* Розмір шрифту */
+  font-weight: bold; /* Жирний шрифт */
+  color: #4a4a4a; /* Колір тексту */
+  text-align: center; /* Центрування тексту */
+  line-height: 1.4; /* Висота рядка для кращого читання */
+  margin: 20px 0; /* Відступи зверху і знизу */
+  padding: 0 10px; /* Відступи зліва і справа */
+  background: linear-gradient(135deg, #e3e3e3 0%, #c0c0c0 100%); /* Градієнтний фон */
+  border-radius: 10px; /* Скруглення кутів */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для об'єму */
+  padding: 20px; /* Внутрішні відступи */
+}
+
+/* Анімація пульсації тексту */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: #4a4a4a; /* Початковий колір тексту */
+  }
+  50% {
+    transform: scale(1.05); /* Менший масштаб збільшення */
+    color: #6f6f6f; /* М'якший колір під час пульсації */
+  }
+  100% {
+    transform: scale(1);
+    color: #439043; /* Кінцевий колір тексту */
+  }
+}
+
+/* Стилі для слів з пульсацією */
+.pulse-text {
+  display: inline-block;
+  animation: pulse 2s infinite; /* Анімація з більшою тривалістю */
+}
+
+/* Адаптивні стилі для заголовка */
+@media screen and (max-width: 768px) {
+  .section-title-footer {
+    font-size: 1.5rem; /* Зменшений розмір шрифту на мобільних пристроях */
+    padding: 15px; /* Зменшені внутрішні відступи */
+  }
+}
