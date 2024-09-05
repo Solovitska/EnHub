@@ -1,3 +1,16 @@
+/* Базові стилі для секції footer */
+.support-footer {
+  background: linear-gradient(135deg, #eceff1, #b0bec5);
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Вирівнювання по горизонталі */
+  justify-content: center; /* Вирівнювання по вертикалі */
+  border: 5px solid #87c7f6; /* Початковий колір рамки */
+  margin: 0 auto;
+}
+
 /* Стилі для заголовка в футері */
 .section-title-footer {
   font-size: 2rem; /* Розмір шрифту */
@@ -6,12 +19,27 @@
   text-align: center; /* Центрування тексту */
   line-height: 1.4; /* Висота рядка для кращого читання */
   margin: 20px 0; /* Відступи зверху і знизу */
-  padding: 0 10px; /* Відступи зліва і справа */
   background: linear-gradient(135deg, #e3e3e3 0%, #c0c0c0 100%); /* Градієнтний фон */
   border-radius: 10px; /* Скруглення кутів */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для об'єму */
   padding: 20px; /* Внутрішні відступи */
 }
+
+/* Стилі для зображення */
+.category-photos-footer {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+
+}
+
+.photo-wide-footer {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; /* Центрування */
+  border-radius: 5px;}
+
+
 
 /* Анімація пульсації тексту */
 @keyframes pulse {
@@ -21,11 +49,11 @@
   }
   50% {
     transform: scale(1.05); /* Менший масштаб збільшення */
-    color: #6f6f6f; /* М'якший колір під час пульсації */
+    color: #e31111; /* М'якший колір під час пульсації */
   }
   100% {
     transform: scale(1);
-    color: #439043; /* Кінцевий колір тексту */
+    color: #911515; /* Кінцевий колір тексту */
   }
 }
 
@@ -40,5 +68,19 @@
   .section-title-footer {
     font-size: 1.5rem; /* Зменшений розмір шрифту на мобільних пристроях */
     padding: 15px; /* Зменшені внутрішні відступи */
+  }
+
+  .photo-wide-footer {
+    max-width: 90%; /* Зменшення розміру зображення для мобільних пристроїв */
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section-title-footer {
+    font-size: 3rem;
+  }
+
+  .photo-wide-footer {
+    max-width: 800px;
   }
 }

@@ -8,9 +8,8 @@
   gap: 30px;
   box-sizing: border-box;
   position: relative;
-  border-bottom: 5px solid  #4eb5ffb0; /* Легка тінь для розділення */
+  border-bottom: 5px solid #4eb5ffb0; /* Легка тінь для розділення */
 }
-
 
 /* Додання фонових зображень або візерунків */
 .about-us-hero::before {
@@ -18,8 +17,9 @@
   position: absolute;
   top: 0;
   left: 0;
-
-
+  width: 100%;
+  height: 100%;
+  background-image: url('./path-to-your-image.jpg'); /* Додайте шлях до зображення */
   background-size: cover;
   z-index: -1; /* Поміщає фон за контентом */
   opacity: 0.1; /* Зменшення прозорості */
@@ -27,7 +27,7 @@
 
 /* Стилі для контенту секції */
 .about-us-content {
-  max-width: 45%; /* Зменшена максимальна ширина */
+  max-width: 100%; /* Збільшена максимальна ширина */
   padding: 30px;
   background: rgba(164, 179, 191, 0.436); /* Прозорий фон для контенту */
   border-radius: 12px;
@@ -36,8 +36,8 @@
 }
 
 .about-us-content:hover {
-  transform: translateY(-5px); /* Підняття елемента при наведенні */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Підсилення тіні при наведенні */
+  transform: translateY(-10px); /* Підняття елемента при наведенні */
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Підсилення тіні при наведенні */
 }
 
 /* Стилі для опису */
@@ -54,7 +54,7 @@
 
 .about-us-description:hover {
   background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%); /* Зміна фону при наведенні */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Зміна тіні при наведенні */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Зміна тіні при наведенні */
 }
 
 /* Стилі для зображення */
@@ -84,5 +84,22 @@
 
   .about-us-description {
     font-size: 1.125rem; /* Зменшення розміру шрифту на мобільних пристроях */
+  }
+}
+
+/* Адаптивні стилі для великих екранів */
+@media screen and (min-width: 1024px) {
+  .about-us-hero {
+    padding: 60px 40px;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .about-us-content {
+    max-width: 45%;
+  }
+
+  .about-us-description {
+    font-size: 1.25rem;
   }
 }

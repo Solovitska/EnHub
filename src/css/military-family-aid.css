@@ -154,14 +154,15 @@
   list-style: none;
   text-align: left;
   margin: 0;
-  color: #000; /* Чорний колір тексту */
+  color: #000;
+
 }
 
 .military-family-aid-benefits li {
   margin-bottom: 10px;
   padding-left: 35px; /* Збільшити відступ, якщо потрібно */
   position: relative;
-  font-size: 16px; /* Налаштувати розмір шрифту, щоб він відповідав маркеру */
+  font-size: 20px; /* Налаштувати розмір шрифту, щоб він відповідав маркеру */
 }
 
 .military-family-aid-benefits li::before {
@@ -173,6 +174,7 @@
   font-weight: bold;
   top: 50%; /* Вирівнює маркер по центру тексту */
   transform: translateY(-50%); /* Вирівнює маркер по центру тексту */
+
 }
 
 /* Адаптивні стилі */
@@ -190,6 +192,7 @@
 
   .military-family-aid-benefits {
     padding: 20px;
+
   }
 }
 
@@ -197,8 +200,8 @@
 @media screen and (max-width: 1024px) {
   .military-family-aid {
     padding: 30px 15px;
-  }
 
+  }
   .military-family-aid-title {
     font-size: 2.5rem;
   }
