@@ -1,0 +1,148 @@
+/* Основні стилі для заголовка сторінки */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f0f4f8; /* Світлий нейтральний фон */
+  color: #261e4f9b; /* Темний колір тексту */
+  font-size: 14px; /* Трохи збільшений розмір шрифту */
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-bottom: 5px solid  #4eb5ffb0; /* Легка тінь для розділення */
+}
+
+/* Стилі для логотипу */
+.logo img {
+  display: block;
+  width: 90px;
+  height: auto; /* Автоматична висота для збереження пропорцій */
+}
+
+/* Стилі для заголовка */
+.header-title h1 {
+  font-size: 2rem; /* Збільшений розмір шрифту для більшого акценту */
+  font-weight: 700;
+  color: #4a4a4a; /* Темний сірий колір тексту */
+}
+
+/* Стилі для бургер-меню */
+.burger {
+  display: none; /* Приховуємо бургер-меню за замовчуванням */
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1000; /* Забезпечує видимість поверх інших елементів */
+}
+
+.burger span {
+  height: 2px;
+  width: 30px;
+  background-color: #3498db6c; /* Яскравий блакитний колір смуг */
+  display: block;
+  transition: all 0.3s ease;
+  margin: 5px 0; /* Відстань між смугами */
+}
+
+/* Стилі для активного стану бургер-меню */
+.burger.active span {
+  transform: scale(0);
+}
+
+.burger.active::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: #3498db; /* Яскравий блакитний колір для перетворень */
+  transform: rotate(-45deg) translate(-50%, -50%);
+}
+
+.burger.active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: #3498db; /* Яскравий блакитний колір для перетворень */
+  transform: rotate(45deg) translate(-50%, 50%);
+}
+
+/* Стилі для навігації */
+.about-us-nav {
+  display: flex; /* Відображаємо навігацію завжди */
+  flex-direction: row; /* Горизонтальне відображення пунктів меню */
+  gap: 20px;
+  background-color: transparent; /* Прозорий фон */
+  padding: 0;
+}
+
+.about-us-nav ul {
+  list-style: none; /* Прибирає маркери списку */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Відображення елементів в рядок */
+  gap: 20px; /* Відстань між пунктами меню */
+}
+
+.about-us-nav a {
+  text-decoration: none; /* Прибирає підкреслення з посилань */
+  color: #3498db; /* Яскравий блакитний колір тексту */
+  padding: 10px 15px; /* Відступи всередині пунктів меню */
+  display: block; /* Перетворює посилання в блочний елемент */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Анімація при наведенні */
+  border-radius: 5px; /* Закруглені кути */
+  font-size: 16px; /* Зменшено для компактного вигляду */
+}
+
+.about-us-nav a:hover {
+  background-color: #e1e8f0; /* Світлий фон при наведенні */
+  color: #333; /* Темний колір тексту при наведенні */
+}
+
+/* Медіа-запити для планшетів і мобільних пристроїв */
+@media screen and (max-width: 1024px) {
+  .burger {
+    display: flex; /* Відображаємо бургер-меню на планшетах та мобільних пристроях */
+  }
+
+  .about-us-nav {
+    display: none; /* Ховаємо навігацію за замовчуванням */
+    flex-direction: column;
+    position: fixed; /* Фіксоване позиціонування */
+    top: 0;
+    left: 0;
+    z-index: 999; /* Під бургер-меню, але поверх іншого контенту */
+    width: 100%;
+    height: 100%;
+    padding: 50px 20px;
+    background-color: rgba(44, 62, 80, 0.9); /* Темний фон з невеликою прозорістю */
+    transform: translateX(-100%); /* Ховаємо меню за межами екрану */
+    transition: transform 0.4s ease;
+    overflow-y: auto; /* Додаємо скролінг, якщо вміст перевищує висоту */
+  }
+
+  .about-us-nav.open {
+    display: flex; /* Відображаємо навігацію при активації */
+    transform: translateX(0); /* Висуваємо меню на екран */
+  }
+
+  .page-header .logo {
+    display: none; /* Ховаємо логотип на планшетах та мобільних пристроях */
+  }
+}
+
+/* Медіа-запити для десктопних пристроїв */
+@media screen and (min-width: 1440px) {
+  .burger {
+    display: none; /* Ховаємо бургер-меню на десктопних пристроях */
+  }
+
+  .about-us-nav {
+    display: flex; /* Відображаємо навігацію на десктопних пристроях */
+  }
+}
