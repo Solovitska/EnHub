@@ -1,129 +1,87 @@
-/* Контейнер для бургер-меню і заголовка */
-.header-container {
+/* Основні стилі для секції про нас */
+.about-us-hero {
   display: flex;
-  align-items: center; /* Вертикальне вирівнювання */
-  justify-content: space-between; /* Розміщення елементів по боках */
-  padding: 20px; /* Додати загальний відступ для контейнера */
-  margin-bottom: 90px;
-  background-color: #bacbcf; /* Легкий сірий фон */
-  position: fixed; /* Фіксоване позиціонування */
-  top: 0; /* Закріплення в верхній частині */
-  left: 0;
-  right: 0;
-  z-index: 20; /* Щоб панель була зверху всього іншого */
-}
-
-.burger-menu-container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #c8d2d7 0%, #b9dced 100%);
+  gap: 30px;
+  box-sizing: border-box;
   position: relative;
-  z-index: 10; /* Щоб меню-бургер був зверху навігації */
 }
 
-.burger-menu {
-  display: none; /* Приховано за замовчуванням на десктопах */
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
-  background-color: #888e95; /* Сіро-голубий фон кнопки бургер-меню */
-  border-radius: 5px; /* Закруглені кути */
-  padding: 5px; /* Внутрішні відступи */
+
+/* Додання фонових зображень або візерунків */
+.about-us-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+
+
+  background-size: cover;
+  z-index: -1; /* Поміщає фон за контентом */
+  opacity: 0.1; /* Зменшення прозорості */
 }
 
-.burger-menu span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #fff; /* Білий колір для смуг бургер-меню */
-  transition: all 0.3s ease;
+/* Стилі для контенту секції */
+.about-us-content {
+  max-width: 45%; /* Зменшена максимальна ширина */
+  padding: 30px;
+  background: rgba(164, 179, 191, 0.436); /* Прозорий фон для контенту */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Додаткові тіні */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Відстань між бургер-меню і заголовком */
-.header-title {
-  margin-left: 20px; /* Відстань між бургер-меню і заголовком */
-  color: #69819d;
+.about-us-content:hover {
+  transform: translateY(-5px); /* Підняття елемента при наведенні */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Підсилення тіні при наведенні */
 }
 
-/* Адаптивні стилі для мобільних та планшетів */
-@media (max-width: 768px) {
-  .burger-menu {
-    display: flex; /* Показуємо меню-бургер на мобільних та планшетах */
-  }
-  .about-us-content {
-    margin-bottom: 60px;
-  }
-  .about-us-title {
-    margin-bottom: 100px;
-  }
+/* Стилі для опису */
+.about-us-description {
+  font-size: 1.25rem; /* Збільшення розміру шрифту */
+  line-height: 1.8; /* Збільшення висоти рядка */
+  color: #444; /* Темніший колір тексту */
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); /* Градієнтний фон */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .about-us-nav {
-    display: none; /* Ховаємо навігацію за замовчуванням */
+.about-us-description:hover {
+  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%); /* Зміна фону при наведенні */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Зміна тіні при наведенні */
+}
+
+/* Стилі для зображення */
+.about-us-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-us-image img:hover {
+  transform: scale(1.05); /* Збільшення зображення при наведенні */
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media screen and (max-width: 768px) {
+  .about-us-hero {
     flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: var(--background-color); /* Використовуємо змінну для кольору фону */
-    padding: 20px 0;
-    transition: all 0.3s ease;
-    z-index: 9; /* Навігація під меню-бургером */
-  }
-
-  .about-us-nav-list {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .about-us-nav-list li a {
-    padding: 10px 0;
-    width: 100%;
     text-align: center;
+    padding: 40px 10px;
   }
 
-  /* Показуємо навігацію при активному класі */
-  .about-us-nav.active {
-    display: flex;
+  .about-us-content {
+    max-width: 100%; /* Збільшена максимальна ширина */
   }
 
-  /* Анімація для меню-бургера при натисканні */
-  .burger-menu.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .burger-menu.active span:nth-child(2) {
-    opacity: 0; /* Прибираємо середню лінію */
-  }
-
-  .burger-menu.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+  .about-us-description {
+    font-size: 1.125rem; /* Зменшення розміру шрифту на мобільних пристроях */
   }
 }
-
-/* Темна тема */
-[data-theme='dark'] .burger-menu {
-  background-color: #4b5d67; /* Темніший сіро-голубий фон для темної теми */
-}
-
-[data-theme='dark'] .burger-menu span {
-  background-color: #fff; /* Білий колір для смуг бургер-меню в темній темі */
-}
-
-/* Світла тема */
-[data-theme='light'] .burger-menu {
-  background-color: #b0c4de; /* Сіро-голубий фон для світлої теми */
-}
-
-[data-theme='light'] .burger-menu span {
-  background-color: #fff; /* Білий колір для смуг бургер-меню у світлій темі */
-}
-/* Default state */
-.about-us-nav {
-  display: none; /* Hidden by default */
-}
-
-/* When 'active' class is added */
-.about-us-nav.active {
-  display: flex; /* Show the navigation */
-}
-
