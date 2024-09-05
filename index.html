@@ -25,23 +25,33 @@
     <script type="module" crossorigin src="/EnHub/index.js"></script>
     <link rel="modulepreload" crossorigin href="/EnHub/assets/vendor-CTqzIL4Y.js">
     <link rel="stylesheet" crossorigin href="/EnHub/assets/vendor-CzG10Eoq.css">
-    <link rel="stylesheet" crossorigin href="/EnHub/assets/index-BFAeyyWk.css">
+    <link rel="stylesheet" crossorigin href="/EnHub/assets/index-jojN9Roe.css">
   </head>
   <body>
-    <section class="about-us-hero" id="about">
-  <div class="header-container">
+    
+</header>
+<header class="page-header">
+  <!-- Логотип -->
+  <div class="logo">
+    <img class="logo" src="/EnHub/assets/En-removebg-giNT4vIJ.webp" alt="En-my" width="50" height="50" />
+  </div>
+
+
+  <!-- Контейнер заголовка і меню -->
+  <div class="menu-container">
     <div class="header-title">
-      <h1>ЕНЕРГОДАРСЬКИЙ ХАБ</h1>
-    </div>
-    <div class="burger-menu-container">
-      <div class="burger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <h1>ЕНЕРГОДАРСЬКИЙ  ХАБ</h1>
     </div>
   </div>
 
+  <!-- Бургер-меню -->
+  <div class="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Навігаційне меню -->
   <nav class="about-us-nav">
     <ul class="about-us-nav-list">
       <li><a href="#about">Про нас</a></li>
@@ -50,36 +60,40 @@
       <li><a href="#contacts">Контакти</a></li>
     </ul>
   </nav>
+</header>
 
+    <section class="about-us-hero" id="about">
+  <div class="about-us-image">
+    <img src="/EnHub/assets/peoplemy-75dfxnn7.png"
+    width="900"
+    height="700"
+    alt="Зображення людей">
+  </div>
   <div class="about-us-content">
-    <h2 class="about-us-title"></h2>
+
     <p class="about-us-description">
-      Ми команда Енергодарського хабу, допомагаємо вимушено переміщеним людям із тимчасово окупованого міста. Тут вони можуть отримати консультації з юридичних, освітніх та соціальних питань, а також адміністративних послуг.
+      Ми команда Енергодарського хабу. Допомагаємо людям, які змушені були покинути свої домівки та виїхати з тимчасово окупованого міста. Тут ви можете отримати консультації з юридичних, освітніх та соціальних питань, а також адміністративні послуги.
     </p>
   </div>
 
-  <div class="about-us-image">
-    <img src="/EnHub/assets/peoplemy-75dfxnn7.png" alt="Зображення людей">
-  </div>
+
 </section>
 
 
     <section class="child-aid" id="childrenhelp">
-  <div class="container child-aid__container">
-    <h2 class="child-aid__title section__title">Допомога дітям</h2>
+  <div class="container child-aid-container">
+    <h2 class="child-aid-title section-title">Допомога дітям</h2>
   </div>
-  <div class="child-aid__items">
+  <div class="child-aid-items">
     <article class="child-item">
-      <div class="child-item__image-container">
+      <div class="child-item-image-container">
         <img
-          class="child-item__image"
+          class="child-item-image"
           src="/EnHub/assets/girl-B-naRLpj.webp"
-          width="640"
-          height="457"
-
+          
           alt="Дитячі набори для дітей до трьох років"
         />
-        <div class="child-item__content">
+        <div class="child-item-content">
           <ul class="child-text">
             <li>Дитячі набори для дітей до трьох років</li>
             <li>Суміш</li>
@@ -92,41 +106,75 @@
     </article>
   </div>
 </section>
-    <section class="contacts" id="contacts">
-  <div class="container container-contacts">
-    <ul class="contact-list">
-      <li class="contact-item">
-        <!-- <div class="icon-container"> -->
-          <!-- <svg class="icon-tell" width="32" height="32">
-            <use href="../img/contacts/tel.svg"></use>
-          </svg> -->
-
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#48C9B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-2.83A19.55 19.55 0 0 1 3.91 13.8a19.86 19.86 0 0 1-2.83-8.63A2 2 0 0 1 3 3.18h3a2 2 0 0 1 2 1.72c.15 1.11.5 2.17 1.05 3.16a2 2 0 0 1-.45 2.33l-1.27 1.27a16 16 0 0 0 6.36 6.36l1.27-1.27a2 2 0 0 1 2.33-.45 15.91 15.91 0 0 0 3.16 1.05 2 2 0 0 1 1.73 2.03z"/>
-          </svg> -->
-        <!-- </div> -->
-        <h4 class="contacts-title">Телефони</h4>
-        <p class="contacts-data"> <a href="tel:+380980173725">+380 980 173 725</a></p>
-        <p class="contacts-data"> <a href="tel:+380997505994">+380 997 505 994</a></p>
-        <p class="contacts-data">Email: <a href="mailto:energodarhub@gmail.com">energodarhub@gmail.com</a></p>
-
-        <div class="social-media">
-          <h4>Ми в соціальних мережах</h4>
-          <div class="social-icons">
-
-            <a href="https://t.me/energodar_ircd" target="_blank" aria-label="Telegram">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="64px" height="64px">
-                <circle cx="24" cy="24" r="24" fill="#0088cc"/>
-                <path fill="#ffffff" d="M37.8,10.4l-29,11.5c-1.1,0.4-1.2,1.3-0.2,1.7l6.9,2.2l2.6,8.2c0.3,0.9,1.4,1.1,2,0.6l3.9-3.1l6.8,5.2c1.3,1,2.3,0.5,2.7-1.1 l4.9-23.6C39.3,10.8,38.6,10,37.8,10.4z"/>
-              </svg>
-            </a>
-          </div>
+    <section class="support-categories" id="training-legal-aid">
+  <div class="container training-legal-aid">
+    <article class="training-content">
+      <h2 class="support-categories-title section-title">
+        Допомога<br />
+        молодим людям
+      </h2>
+      <div class="support-category-photos">
+        <img
+          class="support-photo-wide"
+          src="/EnHub/assets/education3-D0_-8cHH.jpg"
+          alt="Навчання та юридична допомога"
+        />
+        <div class="support-training-content">
+          <ul class="support-training-benefits">
+            <li>Навчання</li>
+            <li>Юридична допомога</li>
+            <li>Соціальна допомога</li>
+          </ul>
         </div>
-      </li>
-    </ul>
+      </div>
+    </article>
   </div>
 </section>
-
+    <section class="military" id="military-family-aid">
+  <div class="container military-family-aid">
+    <article class="military-family-aid">
+      <h2 class="military-family-aid-title">Допомога військовим</h2>
+      <div class="military-family-aid-photos">
+        <img
+          class="military-photo-wide"
+          src="/EnHub/assets/warrior1-B8ZCNOhP.jpg"
+          alt="Допомога військовим та їх родинам"
+        />
+        <div class="military-family-aid-content">
+          <ul class="military-family-aid-benefits">
+            <li>Допомога військовим</li>
+            <li>Допомога дітям військових</li>
+            <li>Допомога сім'ям військових</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+    <section class="support-seniors" id="pensioners">
+  <div class="container pensioners-aid">
+    <article class="pensioners-content">
+      <h2 class="support-seniors-title section-title">
+        Допомога людям <br />
+        похилого віку
+      </h2>
+      <div class="support-category-photos">
+        <img
+          class="support-photo-wide"
+          src="/EnHub/assets/pensioners-vawW1CIT.jpg"
+          alt="Допомога людям поважного віку"
+        />
+        <div class="support-seniors-content">
+          <ul class="support-seniors-benefits">
+            <li>Медична допомога</li>
+            <li>Надання продуктових наборів</li>
+            <li>Соціальна допомога</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
 
     <section class="faq-section section" id="faq">
   <div class="container">
@@ -266,76 +314,41 @@
   </div>
 </section>
 
-    <section class="military" id="military-family-aid">
-  <div class="container military-family-aid">
-    <article class="military-family-aid">
-      <h2 class="military-family-aid__title">Допомога військовим <br> та їх родинам</h2>
-      <div class="military-family-aid__photos">
-        <img
-          class="military-photo-wide"
-          src="/EnHub/assets/warrior1-B8ZCNOhP.jpg"
-          alt="Допомога військовим та їх родинам"
-        />
-        <div class="military-family-aid__content">
-          <ul class="military-family-aid__benefits">
-            <li>Допомога військовим</li>
-            <li>Допомога дітям військових</li>
-            <li>Допомога сім'ям військових</li>
-          </ul>
+    <section class="contacts" id="contacts">
+  <div class="container container-contacts">
+    <ul class="contact-list">
+      <li class="contact-item">
+        <!-- <div class="icon-container"> -->
+          <!-- <svg class="icon-tell" width="32" height="32">
+            <use href="../img/contacts/tel.svg"></use>
+          </svg> -->
+
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#48C9B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-2.83A19.55 19.55 0 0 1 3.91 13.8a19.86 19.86 0 0 1-2.83-8.63A2 2 0 0 1 3 3.18h3a2 2 0 0 1 2 1.72c.15 1.11.5 2.17 1.05 3.16a2 2 0 0 1-.45 2.33l-1.27 1.27a16 16 0 0 0 6.36 6.36l1.27-1.27a2 2 0 0 1 2.33-.45 15.91 15.91 0 0 0 3.16 1.05 2 2 0 0 1 1.73 2.03z"/>
+          </svg> -->
+        <!-- </div> -->
+        <h4 class="contacts-title">Телефони</h4>
+        <p class="contacts-data"> <a href="tel:+380980173725">+380 980 173 725</a></p>
+        <p class="contacts-data"> <a href="tel:+380997505994">+380 997 505 994</a></p>
+        <p class="contacts-data">Email: <a href="mailto:energodarhub@gmail.com">energodarhub@gmail.com</a></p>
+
+        <div class="social-media">
+          <h4>Ми в соціальних мережах</h4>
+          <div class="social-icons">
+
+            <a href="https://t.me/energodar_ircd" target="_blank" aria-label="Telegram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="64px" height="64px">
+                <circle cx="24" cy="24" r="24" fill="#0088cc"/>
+                <path fill="#ffffff" d="M37.8,10.4l-29,11.5c-1.1,0.4-1.2,1.3-0.2,1.7l6.9,2.2l2.6,8.2c0.3,0.9,1.4,1.1,2,0.6l3.9-3.1l6.8,5.2c1.3,1,2.3,0.5,2.7-1.1 l4.9-23.6C39.3,10.8,38.6,10,37.8,10.4z"/>
+              </svg>
+            </a>
+          </div>
         </div>
-      </div>
-    </article>
-  </div>
-</div>
-</section>
-    <section class="support-categories" id="training-legal-aid">
-  <div class="container training-legal-aid">
-    <article class="training-content">
-      <h2 class="support-categories-title section-title">
-        Допомога<br />
-        молодим людям
-      </h2>
-      <div class="support-category-photos">
-        <img
-          class="support-photo-wide"
-          src="/EnHub/assets/education3-D0_-8cHH.jpg"
-          alt="Навчання та юридична допомога"
-        />
-        <div class="support-training-content">
-          <ul class="support-training-benefits">
-            <li>Навчання</li>
-            <li>Юридична допомога</li>
-            <li>Соціальна допомога</li>
-          </ul>
-        </div>
-      </div>
-    </article>
+      </li>
+    </ul>
   </div>
 </section>
-    <section class="support-seniors" id="pensioners">
-  <div class="container pensioners-aid">
-    <article class="pensioners_content">
-      <h2 class="support-seniors__title section__title">
-        Допомога людям <br />
-        поважного віку
-      </h2>
-      <div class="support-category__photos">
-        <img
-          class="support-photo-wide"
-          src="/EnHub/assets/pensioners-vawW1CIT.jpg"
-          alt="Допомога людям поважного віку"
-        />
-        <div class="support-seniors__content">
-          <ul class="support-seniors__benefits">
-            <li>Медична допомога</li>
-            <li>Надання продуктових наборів</li>
-            <li>Соціальна допомога</li>
-          </ul>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
+
 
     <main>
       <!-- Loads the specified .html file -->
