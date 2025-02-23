@@ -68,7 +68,6 @@
 .child-aid:hover::before {
   transform: rotate(30deg) scale(1.2);
 }
-
 .child-aid-title {
   font-size: 3rem;
   font-weight: 900;
@@ -79,10 +78,12 @@
   position: relative;
   z-index: 2;
   background: linear-gradient(135deg, hsl(273, 15%, 34%) 0%, #808080 100%);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; 
   animation: fadeInDown 1s ease, colorChange 5s ease-in-out infinite;
 }
+
 
 /* Стилі для елементів */
 .child-aid-items {
