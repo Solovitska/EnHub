@@ -19,7 +19,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('./path-to-your-image.jpg'); /* Додайте шлях до зображення */
+  background-image: url('./img/aboutus/a6cfd600-adea-4f43-bafe-91a5d74dfa65.webp'); /* Додайте шлях до зображення */
   background-size: cover;
   z-index: -1; /* Поміщає фон за контентом */
   opacity: 0.1; /* Зменшення прозорості */
